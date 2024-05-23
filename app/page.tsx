@@ -3,14 +3,14 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-interface IInterpretations {
+interface IInterpretation {
   $id: string,
   term: string,
   interpretation: string
 }
 
 export default function Home() {
-  const [interpretations, setInterpretations] = useState<IInterpretations[]>([]);
+  const [interpretations, setInterpretations] = useState<IInterpretation[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   console.log(interpretations);
